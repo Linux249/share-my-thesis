@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Gilroy-light';
+  src: url('fonts/Gilroy-Light.otf')format("opentype");
+}
+
+@font-face {
+  font-family: 'Gilroy-bold';
+  font-weight: bold;
+  src: url('fonts/Gilroy-ExtraBold.otf')format("opentype");
+}
+
+@font-face {
+  font-family: 'Asphalts Brush';
+  src: url('fonts/Asphalts Brush (Personal Use).ttf') format("truetype");
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Gilroy-light, sans-serif;
+}
+
+a, u {
+  text-decoration: none;
+  color: inherit;
+
+}
