@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Gilroy-light';
   src: url('fonts/Gilroy-Light.otf')format("opentype");
@@ -19,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Gilroy-light, sans-serif;
+  color: #141861;
 }
 
 a, u {
