@@ -6,9 +6,6 @@ import ArrowDown from '../svg/ArrowDown'
 const DropDownArea = styled.div`
 
     color: ${pale};
-        
-    background-color: inherit;
-    border: 0.1rem solid ${red};
 `;
 
 const Row = styled.div`
@@ -16,13 +13,14 @@ const Row = styled.div`
     justify-content: space-between;
     align-items: center;
     
+    color: ${pale};
+    
     height: 3rem;
     width: 30rem;
     
     border: 0.05rem solid ${red};
     
-    margin-top: 0.5rem;
-    
+    margin-top: 0.5rem;    
     margin-bottom: 1rem;
 
 `;
@@ -68,13 +66,13 @@ class DropDown extends Component {
         const {select} = this.state;
 
         return (
-            <div>
+            <DropDownArea>
                 <Title>What Subject are you interested in?</Title>
                 <Row>
                     <Select>{select}</Select>
                     <Button><ArrowDown/></Button>
                 </Row>
-            </div>
+            </DropDownArea>
 
         )
     }
