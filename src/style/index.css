@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Gilroy-light, sans-serif;
+  font-size: 1rem;
   color: #141861;
 }
 
@@ -27,4 +28,11 @@ a, u {
   text-decoration: none;
   color: inherit;
 
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }

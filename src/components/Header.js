@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import Logo from './Logo'
 
 
@@ -13,9 +13,10 @@ const Header = styled.header`
     
     font-family: "Gilroy-bold", sans-serif;
     color: salmon;
+    font-size: 2rem;
     
     padding: 0 1em;
-`
+`;
 
 
 
@@ -25,13 +26,13 @@ const NavLinks = styled.div`
     
     flex-basis: 20em;
 
-`
+`;
 
 
 const Buttons = styled.div`
 
 
-`
+`;
 
 export default () => (
     <Header>
