@@ -4,19 +4,20 @@ import {NavLink} from 'react-router-dom'
 import Logo from './Logo'
 import user from '../svg/user.svg'
 import search from '../svg/searchIcon.svg'
+import {darkBlue} from '../style/colors'
 
 const Header = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-    height: 5em;
+    height: 10rem;
     
     font-family: "Gilroy-bold", sans-serif;
-    color: salmon;
+    color: ${darkBlue};
     font-size: 2rem;
     
-    padding: 0 1em;
+    padding: 0 2rem;
 `;
 
 
@@ -25,7 +26,7 @@ const NavLinks = styled.div`
     display: flex;
     justify-content: space-between;
     
-    flex-basis: 20em;
+    flex-basis: 40rem;
 
 `;
 
