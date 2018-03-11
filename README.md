@@ -3,6 +3,7 @@
 
 ###Todo
 - resize Item
+- fix responsive bei /explore
 
 ###Fehlende SVGs:
 - das neue Hintergrundbild am

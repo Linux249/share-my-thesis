@@ -34,6 +34,8 @@ const SubjectBox = styled.div`
     
     width: 35rem;
     height: 20rem;
+    
+    margin: 1rem;
 
 `
 
@@ -52,8 +54,7 @@ const SubjectText = styled.div`
     width: 80%;
     height: 30%;
     
-    cursor: pointer;
-
+    padding: 0 1rem;
 `
 
 const Image = styled.img`
