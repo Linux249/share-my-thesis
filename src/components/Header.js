@@ -50,15 +50,15 @@ export default () => (
             <Logo/>
         </NavLink>
         <NavLinks>
-            <NavLink to="explore" >Explore</NavLink>
-            <NavLink to="share" >Share</NavLink>
-            <NavLink to="about" >About</NavLink>
+            <NavLink to="/explore" >Explore</NavLink>
+            <NavLink to="/share" >Share</NavLink>
+            <NavLink to="/about" >About</NavLink>
         </NavLinks>
         <Buttons>
-            <NavLink to="explore" >
+            <NavLink to="/explore" >
                 <Image src={search} />
             </NavLink>
-            <NavLink to="user">
+            <NavLink to="/user">
                 <Image src={user} />
             </NavLink>
         </Buttons>

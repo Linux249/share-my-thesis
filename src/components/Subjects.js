@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 import {red, biscuit, blue, white, darkBlue, backGroundColor, pale} from '../style/colors'
-
 import artDesign from '../svg/02_art_design.svg'
 import education from '../svg/03_education.svg'
 import law from '../svg/04_law.svg'

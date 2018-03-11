@@ -6,6 +6,7 @@ import Explore from './Explore'
 import About from './About'
 import User from './User'
 import Share from './Share'
+import Thesis from './Thesis'
 
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
                 <Route exact path="/share" component={Share}/>
                 <Route exact path="/about" component={About} />
                 <Route exact path="/user" component={User} />
+                <Route exact path="/thesis/:id" component={Thesis} />
             </div>
         )
     }

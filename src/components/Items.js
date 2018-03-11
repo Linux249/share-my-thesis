@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import {red, biscuit, blue, white, darkBlue, backGroundColor} from '../style/colors'
 import ViewIcon from '../svg/eye'
 import LikeIcon from '../svg/thumbs-up'
+
 const colors = [red, biscuit, blue]
 
 const Items = styled.div`
@@ -32,24 +34,13 @@ const ItemContainer = styled.div`
    flex-wrap: wrap;
 `
 
-const Item = styled.div`
+const Item = styled(Link)`
    background-color: ${white};
    // height: 800px;
    width: 15rem;
-   height: min-content;
+   //height: min-content;
    margin: 1rem;
-   text-align: left;
-`
-const Title = styled.div`
-   font-family: Gilroy-bold, sans-serif;
-   font-size: 2.2rem;
-   text-overflow: ellipsis;
-   overflow: hidden;
-   word-wrap: break-word;
-   height: 16rem;
-   padding: 1rem;
-  // hyphens: auto;
-   
+   //text-align: left;
 `
 
 const TextBox = styled.div`
@@ -64,11 +55,25 @@ const TextBox = styled.div`
     padding: 0.2rem 0.4rem;
    
 `
+
 const Name = styled.div`
     font-family: Gilroy-bold, sans-serif;
     font-size: 1.2rem;
+       
+`
+
+const Title = styled.div`
+   font-family: Gilroy-bold, sans-serif;
+   font-size: 2.2rem;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   word-wrap: break-word;
+   height: 16rem;
+   padding: 1rem;
+  // hyphens: auto;
    
 `
+
 const Text = styled.div`
    font-size: 1.2rem;
    text-overflow: clip;
@@ -77,27 +82,35 @@ const Text = styled.div`
 `
 
 const Row = styled.div`
-    font-family: Gilroy-bold, sans-serif;
     height: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    padding: 0.4rem;
+    //justify-content: space-around;
 `
-
+const Number = styled(Name)`
+    font-family: Gilroy-bold, sans-serif;
+    padding: 0 1rem;
+`
 
 export default ({items, title}) => (
     <Items>
         <Header>{title}</Header>
         <ItemContainer>
-            {items.map(item => (
-                <Item>
+            {items.map((item,i) => (
+                <Item to={`/thesis/${i}`}>
                     <Title>{item.title}</Title>
                     <TextBox>
                         <Name>{item.name}</Name>
-                        <Text>{item.topic}</Text>
+                        <Text>{item.subject}</Text>
                         <Text>{item.uni}</Text>
                     </TextBox>
-                    <Row><LikeIcon/>{item.likes}<ViewIcon/>{item.views}</Row>
+                    <Row>
+                        <LikeIcon/>
+                        <Number>{item.likes}</Number>
+                        <ViewIcon/>
+                        <Number>{item.views}</Number>
+                    </Row>
                 </Item>
             ))}
         </ItemContainer>

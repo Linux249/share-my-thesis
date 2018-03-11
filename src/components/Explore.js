@@ -83,8 +83,6 @@ const BlueText = styled.div`
     font-size: 3rem;
         
     margin-top: 5rem;
-    
-    cursor: pointer;
 `
 
 

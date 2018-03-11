@@ -5,7 +5,7 @@ import DropDown from './DropDown'
 
 const Box = styled.div`
     
-    width: 80%;
+    width: 70%;
     
     padding-top: 2rem;
     
@@ -30,7 +30,7 @@ const BoxHeader = styled.div`
 const BoxContent = styled.div`
     
     background-color: ${darkBlue};
-    height: 50rem;
+    height: 35rem;
     //width: 100%;
     
     padding: 2rem 1rem;
@@ -53,7 +53,6 @@ export default ({close}) => (
                 title=""
                 options={["Art", "Business", "Desgin", "Economy", "Maths", "Education", "history"]}
             />
-
         </BoxContent>
     </Box>
 )
