@@ -36,7 +36,9 @@ const Buttons = styled.div`
 
 export default () => (
     <Header>
-        <Logo/>
+        <NavLink to="/">
+            <Logo/>
+        </NavLink>
         <NavLinks>
             <NavLink to="explore" >Explore</NavLink>
             <NavLink to="share" >Share</NavLink>

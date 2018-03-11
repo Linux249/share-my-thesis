@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components'
 import {biscuit, darkBlue, red, white} from '../style/colors'
 import Filter from './Filter'
+import Subjects from './Subjects'
 
 const SearchArea = styled.div`
     display: flex;
@@ -78,7 +79,7 @@ const RedText = styled.div`
     color: ${red};
     font-size: 1.3rem;
     
-    border-bottom: 0.rem solid ${red};
+    border-bottom: 0.1rem solid ${red};
     
     padding: 0.5rem 1rem;
     
@@ -89,7 +90,7 @@ const RedText = styled.div`
 class Search extends Component {
 
     state = {
-        show: true
+        show: false
     };
 
     showModal = () => {
@@ -107,28 +108,31 @@ class Search extends Component {
         const {show} = this.state;
 
         return (
-            <SearchArea>
-                {!show &&
-                <ContentMiddle>
-                    <TitleBox>
-                        SEARCH THESIS
-                    </TitleBox>
-                    <InputArea>
-                        <Input
-                            placeholder="Searching for any specific topic or keyword"
-                        />
-                        <SearchButton>Search</SearchButton>
-                    </InputArea>
-                    <RedText onClick={this.showModal}>More filters</RedText>
-                </ContentMiddle>
-                }
-                {show &&
-                <Filter
-                    close={this.closeModal}
-                />
+            <div>
+                <SearchArea>
+                    {!show &&
+                    <ContentMiddle>
+                        <TitleBox>
+                            SEARCH THESIS
+                        </TitleBox>
+                        <InputArea>
+                            <Input
+                                placeholder="Searching for any specific topic or keyword"
+                            />
+                            <SearchButton>Search</SearchButton>
+                        </InputArea>
+                        <RedText onClick={this.showModal}>More filters</RedText>
+                    </ContentMiddle>
+                    }
+                    {show &&
+                    <Filter
+                        close={this.closeModal}
+                    />
 
-                }
-            </SearchArea>
+                    }
+                </SearchArea>
+                <Subjects />
+            </div>
         )
     }
 
