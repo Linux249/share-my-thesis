@@ -13,6 +13,7 @@ const Logo = styled.div`
 const LogoText = styled.div`
     font-family: "Asphalts Brush", sans-serif;
     color: ${red};
+    line-height: 1rem;
 `;
 
 

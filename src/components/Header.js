@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 import Logo from './Logo'
-
+import user from '../svg/user.svg'
+import search from '../svg/searchIcon.svg'
 
 const Header = styled.header`
     display: flex;
@@ -30,9 +31,17 @@ const NavLinks = styled.div`
 
 
 const Buttons = styled.div`
-
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 6rem;
+    height: 2.5rem;
 `;
+
+const Image = styled.img`
+    height: 100%;
+    
+`
 
 export default () => (
     <Header>
@@ -44,7 +53,14 @@ export default () => (
             <NavLink to="share" >Share</NavLink>
             <NavLink to="about" >About</NavLink>
         </NavLinks>
-        <Buttons />
+        <Buttons>
+            <NavLink to="explore" >
+                <Image src={search} />
+            </NavLink>
+            <NavLink to="user">
+                <Image src={user} />
+            </NavLink>
+        </Buttons>
 
     </Header>
 )
