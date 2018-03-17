@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import {biscuit, darkBlue, red, white} from '../style/colors'
-import Filter from './Filter'
-import Subjects from './Subjects'
+import Filter from '../components/Filter'
+import Subjects from '../components/Subjects'
 import TitleBox from '../style/TitleBox'
 
 const SearchArea = styled.div`
@@ -11,7 +11,7 @@ const SearchArea = styled.div`
     background-color: ${biscuit};
     
     height: 50rem;
-`
+`;
 
 const ContentMiddle = styled.div`
     display: flex;
@@ -21,7 +21,7 @@ const ContentMiddle = styled.div`
     
     width: 50%;
 
-`
+`;
 
 
 const InputArea = styled.div`
@@ -31,7 +31,7 @@ const InputArea = styled.div`
     height: 4rem;
     
     margin: 2rem 0;
-`
+`;
 
 const Input = styled.input`
     flex-grow: 4;
@@ -40,7 +40,7 @@ const Input = styled.input`
     
     text-indent: 1rem;
     font-size: 1.3rem;
-`
+`;
 
 const SearchButton = styled.button`
     flex-grow: 1;
@@ -55,7 +55,7 @@ const SearchButton = styled.button`
     
     cursor: pointer;
     
-`
+`;
 
 const RedText = styled.div`
     display: flex;
@@ -71,7 +71,7 @@ const RedText = styled.div`
     padding: 0.5rem 1rem;
     
     cursor: pointer;
-`
+`;
 
 const BlueText = styled.div`
     display: flex;
@@ -83,28 +83,28 @@ const BlueText = styled.div`
     font-size: 3rem;
         
     margin-top: 5rem;
-`
+`;
 
 
 class Explore extends Component {
 
     state = {
         show: false
-    }
+    };
 
     showModal = () => {
-        console.log("show clicked")
+        console.log("show clicked");
         this.setState({show: true})
-    }
+    };
 
     closeModal = () => {
-        console.log("show clicked")
+        console.log("show clicked");
         this.setState({show: false})
-    }
+    };
 
 
     render() {
-        const {show} = this.state
+        const {show} = this.state;
 
         return (
             <div>

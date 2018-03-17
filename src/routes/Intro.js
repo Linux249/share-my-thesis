@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components'
 import intro from '../svg/Intro.svg'
-import Items from './Items'
+import Items from '../components/Items'
 import items from '../mock/items'
 
 const Intro = styled.div`
     
-`
+`;
 
 const IntroImg = styled.img`
    width: 100%

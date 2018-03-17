@@ -1,10 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components'
-import TitleBox from '../style/TitleBox'
-import { items } from '../mock/items'
+import {items} from '../mock/items'
 import ViewIcon from '../svg/eye'
 import LikeIcon from '../svg/thumbs-up'
-import {blue} from '../style/colors'
 
 
 const Thesis = styled.div`
@@ -16,18 +14,18 @@ const Thesis = styled.div`
       width: 70rem;
   }
   
-`
+`;
 
 const Header = styled.div`
     margin: 4rem 0;
-`
+`;
 
 
 const Name = styled.div`
     font-family: Gilroy-bold, sans-serif;
     font-size: 1.2rem;
        
-`
+`;
 
 const Title = styled.div`
    font-family: Gilroy-bold, sans-serif;
@@ -38,7 +36,7 @@ const Title = styled.div`
   // hyphens: auto;
     margin: 2.5rem 0;
    
-`
+`;
 
 const Text = styled.div`
    font-size: 1.3rem;
@@ -46,21 +44,21 @@ const Text = styled.div`
    //white-space: nowrap;
    line-height: 2rem;
 
-`
+`;
 
 const Row = styled.div`
     height: 2rem;
     display: flex;
     align-items: center;
     //justify-content: space-around;
-`
+`;
 const Number = styled(Name)`
     font-family: Gilroy-bold, sans-serif;
     padding: 0 1rem;
-`
+`;
 
 export default ({match}) => {
-    const id = match.params.id % items.length // modulus id
+    const id = match.params.id % items.length; // modulus id
 
     return (
         <Thesis>

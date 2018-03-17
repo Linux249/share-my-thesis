@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {Route} from "react-router-dom";
 import Header from './Header'
-import Intro from './Intro'
-import Explore from './Explore'
-import About from './About'
-import User from './User'
-import Share from './Share'
-import Thesis from './Thesis'
+import Intro from '../routes/Intro'
+import Explore from '../routes/Explore'
+import About from '../routes/About'
+import User from '../routes/User'
+import Share from '../routes/Share'
+import Thesis from '../routes/Thesis'
 
 class App extends Component {
 
