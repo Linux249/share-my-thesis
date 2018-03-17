@@ -1,16 +1,11 @@
 import React from 'react';
 import styled from 'styled-components'
-import {darkBlue, pale, red, white} from '../style/colors'
+import {darkBlue, red, white} from '../style/colors'
 import DropDown from './DropDown'
 
 const Box = styled.div`
-    
     width: 70%;
-    
     padding-top: 2rem;
-    
-    color: ${pale};
-
 `;
 const BoxHeader = styled.div`
     display: flex;
