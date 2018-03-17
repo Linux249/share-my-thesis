@@ -98,13 +98,13 @@ class DropDown extends Component {
     };
 
     render() {
-        const {options} = this.props;
+        const {options, title} = this.props;
         const {selection, showOptions} = this.state;
 
 
         return (
             <DropDownArea>
-                <Title>What Subject are you interested in?</Title>
+                <Title>{title}</Title>
                 <Row onClick={this.toggleOptions}>
                     <Select>{selection}</Select>
                     <Button><ArrowDown/></Button>

@@ -45,9 +45,14 @@ export default ({close}) => (
         </BoxHeader>
         <BoxContent>
             <DropDown
-                title=""
+                title="What Subject are you interested in?"
                 options={["Art", "Business", "Desgin", "Economy", "Maths", "Education", "history"]}
             />
+            <DropDown
+                title="What type of dissertation?"
+                options={["Typ1", "Typ2", "Typ3", "Typ4", "Typ5", "Typ6", "Typ7"]}
+            />
+
         </BoxContent>
     </Box>
 )
