@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
-import {red, biscuit, blue, white, darkBlue, backGroundColor, pale} from '../style/colors'
+import {darkBlue, pale, red} from '../style/colors'
+import business from '../svg/01_business.svg'
 import artDesign from '../svg/02_art_design.svg'
 import education from '../svg/03_education.svg'
 import law from '../svg/04_law.svg'
@@ -14,6 +15,9 @@ import history from '../svg/11_history.svg'
 import nursery from '../svg/12_nursery.svg'
 import sport from '../svg/13_sport.svg'
 import engineeering from '../svg/14_engineeering.svg'
+import chemistry from '../svg/15_chemistry.svg'
+import physics from '../svg/16_physics.svg'
+import maths from '../svg/17_maths.svg'
 
 
 const SubjectArea = styled.div`
@@ -21,7 +25,7 @@ const SubjectArea = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     
-`
+`;
 
 const SubjectBox = styled.div`
     position: relative;
@@ -36,7 +40,7 @@ const SubjectBox = styled.div`
     
     margin: 1rem;
 
-`
+`;
 
 const SubjectText = styled.div`
     position: absolute;
@@ -54,16 +58,16 @@ const SubjectText = styled.div`
     height: 30%;
     
     padding: 0 1rem;
-`
+`;
 
 const Image = styled.img`
     height: 100%
-`
+`;
 
 export default () => (
     <SubjectArea>
         <SubjectBox>
-            <Image />
+            <Image src={business}/>
             <SubjectText>Business & Management Studies</SubjectText>
         </SubjectBox>
         <SubjectBox>
@@ -115,17 +119,17 @@ export default () => (
             <SubjectText>Engineering & Technology</SubjectText>
         </SubjectBox>
         <SubjectBox>
-            <Image  />
+            <Image src={chemistry}/>
             <SubjectText>Chemistry</SubjectText>
         </SubjectBox>
 
         <SubjectBox>
-            <Image />
+            <Image src={physics}/>
             <SubjectText>Physics</SubjectText>
         </SubjectBox>
 
         <SubjectBox>
-            <Image />
+            <Image src={maths}/>
             <SubjectText>Maths</SubjectText>
         </SubjectBox>
 
@@ -134,10 +138,5 @@ export default () => (
             <SubjectText>Nursing</SubjectText>
         </SubjectBox>
 
-
-
-
     </SubjectArea>
-
-
 )
