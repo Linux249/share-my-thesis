@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components'
-import {darkBlue, red, white} from '../style/colors'
+import {darkBlue, pale, red, white} from '../style/colors'
 import DropDown from './DropDown'
+import Input from './Input'
 
 const Box = styled.div`
     width: 70%;
     padding-top: 2rem;
 `;
-
 
 const BoxHeader = styled.div`
     display: flex;
@@ -24,6 +24,7 @@ const BoxHeader = styled.div`
     padding: 1rem;
 
 `;
+
 const BoxContent = styled.div`
     display: flex;  
     flex-wrap: wrap;
@@ -46,12 +47,17 @@ const Column = styled.div`
     max-width: 50%;
 `;
 
-
-
 const Close = styled.div`
     cursor: pointer;
 `;
 
+const Title = styled.div`
+    font-family: "Gilroy-bold", sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    color: ${pale};    
+    padding-top: 1rem;
+`;
 
 export default ({close}) => (
     <Box>
@@ -92,6 +98,9 @@ export default ({close}) => (
                     options={["Typ1", "Typ2", "Typ3", "Typ4", "Typ5", "Typ6", "Typ7 "]}
                 />
             </Column>
+            <Title>Search for any specific topic?</Title>
+            <Input placeholder="Field for Keywords" color="red"/>
         </BoxContent>
+
     </Box>
 )

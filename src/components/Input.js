@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components'
-import {darkBlue, white} from "../style/colors";
+import {darkBlue, red, white} from "../style/colors";
 
 const InputArea = styled.div`
 
@@ -8,27 +8,34 @@ const InputArea = styled.div`
     width: 100%;
     height: 4rem;
     
+    border: 0.1rem solid ${({color}) => color === "red" ? red : darkBlue};
+    
     margin: 2rem 0;
 `;
 
 const InputStyled = styled.input`
     flex-grow: 4;
     
-    border: 0.1rem solid ${darkBlue};
+    border: none;
+    
+    background-color: ${({color}) => color === "red" ? darkBlue : white};
     
     text-indent: 1rem;
     font-size: 1.3rem;
 `;
 
-const SearchButton = styled.button`
+const SearchButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     flex-grow: 1;
     
     background-color: ${darkBlue};
-    border: 1px solid ${darkBlue};
+    border-left: 0.1rem solid ${({color}) => color === "red" ? red : darkBlue};
     
     font-family: "Gilroy-bold", sans-serif;
-    background-color: ${darkBlue};
-    color: ${white};
+    color: ${({color}) => color === "red" ? red : white};
     font-size: 1.5rem;
     
     cursor: pointer;
@@ -43,14 +50,15 @@ class Input extends Component {
 
     render() {
         const {show} = this.state;
-        const {placeholder,} = this.props;
+        const {placeholder, color} = this.props;
 
         return (
-            <InputArea>
+            <InputArea color={color}>
                 <InputStyled
                     placeholder={placeholder}
+                    color={color}
                 />
-                <SearchButton>Search</SearchButton>
+                <SearchButton color={color}>Search</SearchButton>
             </InputArea>
         )
     }
