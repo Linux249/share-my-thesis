@@ -8,6 +8,7 @@ const Box = styled.div`
     padding-top: 2rem;
 `;
 
+
 const BoxHeader = styled.div`
     display: flex;
     justify-content: space-between;
