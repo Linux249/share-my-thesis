@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import {biscuit, darkBlue, red, white} from '../style/colors'
+import {biscuit, darkBlue, red} from '../style/colors'
 import Filter from '../components/Filter'
 import Subjects from '../components/Subjects'
 import TitleBox from '../style/TitleBox'
+import Input from '../components/Input'
 
 const SearchArea = styled.div`
     display: flex;
@@ -21,40 +22,6 @@ const ContentMiddle = styled.div`
     
     width: 50%;
 
-`;
-
-
-const InputArea = styled.div`
-
-    display: flex;
-    width: 100%;
-    height: 4rem;
-    
-    margin: 2rem 0;
-`;
-
-const Input = styled.input`
-    flex-grow: 4;
-    
-    border: 0.1rem solid ${darkBlue};
-    
-    text-indent: 1rem;
-    font-size: 1.3rem;
-`;
-
-const SearchButton = styled.button`
-    flex-grow: 1;
-    
-    background-color: ${darkBlue};
-    border: 1px solid ${darkBlue};
-    
-    font-family: "Gilroy-bold", sans-serif;
-    background-color: ${darkBlue};
-    color: ${white};
-    font-size: 1.5rem;
-    
-    cursor: pointer;
-    
 `;
 
 const RedText = styled.div`
@@ -114,12 +81,7 @@ class Explore extends Component {
                         <TitleBox>
                             SEARCH THESIS
                         </TitleBox>
-                        <InputArea>
-                            <Input
-                                placeholder="Searching for any specific topic or keyword"
-                            />
-                            <SearchButton>Search</SearchButton>
-                        </InputArea>
+                        <Input placeholder="Searching for any specific topic or keyword"/>
                         <RedText onClick={this.showModal}>More filters</RedText>
                         <BlueText>EXPLORE BY SUBJECT</BlueText>
                     </ContentMiddle>
