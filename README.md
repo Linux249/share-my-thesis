@@ -8,6 +8,9 @@ https://share-my-thesis.herokuapp.com/
 - fix responsive bei /explore
 - add filter + change topic to subject
 
+- Option in Dropwdowns
+- Video smaller?
+
 ###Fehlende SVGs:
 - das neue Hintergrundbild mit dem Papierstabel 
 - fehlende Subjects Hintergründe

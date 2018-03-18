@@ -25,6 +25,9 @@ const BoxHeader = styled.div`
 
 `;
 const BoxContent = styled.div`
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
     
     background-color: ${darkBlue};
     height: 35rem;
@@ -33,6 +36,17 @@ const BoxContent = styled.div`
     padding: 2rem 1rem;
 
 `;
+
+const Column = styled.div`
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    
+    
+    max-width: 50%;
+`;
+
+
 
 const Close = styled.div`
     cursor: pointer;
@@ -46,15 +60,38 @@ export default ({close}) => (
             <Close onClick={() => close()}>X</Close>
         </BoxHeader>
         <BoxContent>
-            <DropDown
-                title="What Subject are you interested in?"
-                options={["Art", "Business", "Desgin", "Economy", "Maths", "Education", "history"]}
-            />
-            <DropDown
-                title="What type of dissertation?"
-                options={["Typ1", "Typ2", "Typ3", "Typ4", "Typ5", "Typ6", "Typ7"]}
-            />
-
+            <Column>
+                <DropDown
+                    title="What Subject are you interested in?"
+                    options={["Art", "Business", "Desgin", "Economy", "Maths", "Education", "history"]}
+                />
+                <DropDown
+                    title="What type of dissertation?"
+                    options={["Typ1", "Typ2", "Typ3", "Typ4", "Typ5", "Typ6", "Typ7 "]}
+                />
+            </Column>
+            <Column>
+                <DropDown
+                    small
+                    title="Country"
+                    options={["Art", "Business", "Desgin", "Economy", "Maths", "Education", "history"]}
+                />
+                <DropDown
+                    small
+                    title="Language"
+                    options={["Typ1", "Typ2", "Typ3", "Typ4", "Typ5", "Typ6", "Typ7 "]}
+                />
+                <DropDown
+                    small
+                    title="Year?"
+                    options={["Typ1", "Typ2", "Typ3", "Typ4", "Typ5", "Typ6", "Typ7 "]}
+                />
+                <DropDown
+                    small
+                    title="Univerity"
+                    options={["Typ1", "Typ2", "Typ3", "Typ4", "Typ5", "Typ6", "Typ7 "]}
+                />
+            </Column>
         </BoxContent>
     </Box>
 )

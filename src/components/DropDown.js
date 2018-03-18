@@ -5,6 +5,9 @@ import ArrowDown from '../svg/ArrowDown'
 
 const DropDownArea = styled.div`
     position: relative;
+    
+    max-width: ${props => props.small ? "50%" : "90%"};
+    font-size: ${props => props.small ? "1rem" : "1.3rem"};
 `;
 
 const Row = styled.div`
@@ -14,8 +17,8 @@ const Row = styled.div`
     
     color: ${pale};
     
-    height: 3rem;
-    width: 30rem;
+    height: ${props => props.small ? "2rem" : "3rem"};
+   
     
     border: 0.05rem solid ${red};
     
@@ -27,7 +30,7 @@ const Row = styled.div`
 const Select = styled.div`
     //flex-grow: 4;
     text-indent: 1rem;
-    font-size: 1.3rem;    
+    //font-size: 1.3rem;    
     
 `;
 
@@ -35,6 +38,8 @@ const OptionArea = styled.div`
     
     display: block;
     position: absolute;
+    
+    width: 100%;
 
     //border: 1px solid #c6c6c6;
     //border-radius: 3px;
@@ -46,7 +51,6 @@ const OptionArea = styled.div`
     background-color: ${white};
    
     text-indent: 1rem;
-    font-size: 1.3rem;    
     
 `;
 
@@ -56,7 +60,7 @@ const Option = styled.div`
     align-items: center;
     
     height: 3rem;
-    width: 30rem;
+    
     &:hover {
         background-color: #5cb9ff;
     }
@@ -67,16 +71,18 @@ const Option = styled.div`
 
 const Title = styled.div`
     font-family: "Gilroy-bold", sans-serif;
-    font-size: 1.5rem;
+    //font-size: 1.5rem;
     color: ${pale};    
-
+    padding-top: 1rem;
 `;
 
 
 const Button = styled.div`
     display: flex;
     justify-content: center;
-    width: 3rem;
+    align-items: center;
+    width: ${props => props.small ? "2rem" : "3rem"};
+    height: 100%;
     border-left: 0.1rem solid ${red};
 `;
 
@@ -98,16 +104,18 @@ class DropDown extends Component {
     };
 
     render() {
-        const {options, title} = this.props;
+        const {options, title, small} = this.props;
         const {selection, showOptions} = this.state;
 
 
         return (
-            <DropDownArea>
+            <DropDownArea small={small}>
                 <Title>{title}</Title>
-                <Row onClick={this.toggleOptions}>
+                <Row
+                    small={small}
+                    onClick={this.toggleOptions}>
                     <Select>{selection}</Select>
-                    <Button><ArrowDown/></Button>
+                    <Button small={small}><ArrowDown/></Button>
                 </Row>
                 {showOptions &&
                 <OptionArea>
