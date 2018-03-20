@@ -15,12 +15,12 @@ const Items = styled.div`
 
 const Header = styled.div`
     display: flex;
-    align-content: center;
+    align-items: center;
     
     text-indent: 1rem;
     
     color: ${red};
-    height: 5rem;
+    height: 10rem;
     
     font-family: Gilroy-bold, sans-serif;
     font-size: 4rem;

@@ -1,19 +1,94 @@
 import React from 'react';
 import styled from 'styled-components'
-import {biscuit} from '../style/colors'
+import {biscuit, darkBlue, red} from '../style/colors'
+import about1 from '../svg/about_01.svg'
+import about2 from '../svg/about_02.svg'
+import about3 from '../svg/about_03.svg'
 
+const Area = styled.div`
 
-const Intro = styled.div`
-   // background-color: ${biscuit};
-   // height: 800px;
+   width: 100%;
+`;
+
+const Area2 = styled.div`
+   display: flex;
+   justify-content: space-around;
+   
+   background-color: ${biscuit};
+      
+   width: 100%;
+   
+   padding-top: 5rem;
 `;
 
 
-export default () => (
-    <div>
+const Header = styled.div`
+    display: flex;
+    align-items: center;
+    
+    text-indent: 1rem;
+    
+    color: ${red};
+    height: 10rem;
+    
+    font-family: Gilroy-bold, sans-serif;
+    font-size: 4rem;
+`
 
-        <iframe id="ytplayer" type="text/html" width="1000" height="360"
-                src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
-                frameborder="0"/>
-    </div>
+const Column = styled.div`
+    width: 25%;
+`
+
+const Img = styled.img`
+    width: 100%;
+`
+
+const Button = styled.div`
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    border: 0.05rem solid ${darkBlue};
+    height: 3rem;
+    
+    font-family: Gilroy-bold, sans-serif;
+    font-size: 2rem;
+    
+    cursor: pointer;
+`
+const Text = styled.div`
+
+`
+
+const Number = styled.div`
+
+    font-family: Gilroy-bold, sans-serif;
+    font-size: 3rem;
+    
+`
+
+export default () => (
+    <Area>
+
+        <iframe src="https://player.vimeo.com/video/260996942" width="900" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <Header>What is this site about?</Header>
+        <Area2>
+            <Column>
+                <Number>1.</Number>
+                <Img src={about1}/>
+                <Button>Upload</Button>
+            </Column>
+            <Column>
+                <Number>2.</Number>
+                <Img src={about2}/>
+                <Button>Share</Button>
+            </Column>
+            <Column>
+                <Number>3.</Number>
+                <Img src={about3}/>
+                <Button>Explore</Button>
+            </Column>
+
+        </Area2>
+    </Area>
 )

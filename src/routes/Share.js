@@ -321,7 +321,7 @@ const Slide8 = () => (
 
 
 
-export default (props) => (
+export default () => (
     <Area>
         <SildeArea>
             <Route path="/share/1" component={Slide1} />
@@ -332,7 +332,6 @@ export default (props) => (
             <Route path="/share/6" component={Slide6} />
             <Route path="/share/7" component={Slide7} />
             <Route path="/share/8" component={Slide8} />
-
         </SildeArea>
     </Area>
 )
