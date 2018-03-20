@@ -35,10 +35,12 @@ const SubjectBox = styled.div`
     
     background-color: ${darkBlue};
     
-    width: 35rem;
-    height: 20rem;
+    width: 25rem;
+    height: 15rem;
     
     margin: 1rem;
+    
+    cursor: pointer;
 
 `;
 
@@ -50,7 +52,7 @@ const SubjectText = styled.div`
   
     color: ${pale};
     font-family: "Gilroy-bold", sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     
     background-color: ${red};
     
