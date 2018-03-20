@@ -7,6 +7,7 @@ import TextArea from '../components/TextArea'
 import { Route, Link } from "react-router-dom";
 import pdf from '../svg/pdf.svg'
 import arrow from '../svg/ArrowRightBlue.svg'
+import share from '../svg/share.svg'
 
 const Area = styled.div`
     width: 100%;
@@ -25,6 +26,11 @@ const Img = styled.img`
 const ImgSmall = styled.img`
     width: 3rem;
     height: 3rem;
+`
+
+const ImgBig = styled.img`
+    width: 100%;
+    height: 100%;
 `
 
 const SildeArea = styled.div`
@@ -301,11 +307,16 @@ const Slide7 = () => (
             {/*<Item />*/}
         </Middle>
         <Right>
-            <Button to="/share/1" >Share<ImgSmall src={arrow}/></Button>
+            <Button to="/share/8" >Share<ImgSmall src={arrow}/></Button>
         </Right>
     </Fragment>
 )
 
+const Slide8 = () => (
+    <Fragment>
+        <ImgBig src={share}/>
+    </Fragment>
+)
 
 
 
@@ -320,6 +331,7 @@ export default (props) => (
             <Route path="/share/5" component={Slide5} />
             <Route path="/share/6" component={Slide6} />
             <Route path="/share/7" component={Slide7} />
+            <Route path="/share/8" component={Slide8} />
 
         </SildeArea>
     </Area>
