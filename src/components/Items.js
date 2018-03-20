@@ -37,7 +37,7 @@ const ItemContainer = styled.div`
 const Item = styled(Link)`
    background-color: ${white};
    // height: 800px;
-   width: 15rem;
+   width: 16rem;
    //height: min-content;
    margin: 1rem;
    //text-align: left;

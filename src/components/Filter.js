@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {darkBlue, red, white} from '../style/colors'
-import DropDown from './DropDown'
+import DropDown from './DropDownBR'
 
 const Box = styled.div`
     width: 70%;

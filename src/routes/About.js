@@ -12,6 +12,8 @@ const Intro = styled.div`
 export default () => (
     <div>
 
-        about
+        <iframe id="ytplayer" type="text/html" width="1000" height="360"
+                src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+                frameborder="0"/>
     </div>
 )

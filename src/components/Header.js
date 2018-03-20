@@ -11,16 +11,17 @@ const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     
-    height: 10rem;
+    width: 95%;
+    
+    
+    height: 7rem;
     
     font-family: "Gilroy-bold", sans-serif;
     color: ${darkBlue};
-    font-size: 2rem;
+    font-size: 1.5rem;
     
     padding: 0 2rem;
 `;
-
-
 
 const NavLinks = styled.div`
     display: flex;
@@ -29,7 +30,6 @@ const NavLinks = styled.div`
     flex-basis: 40rem;
 
 `;
-
 
 const Buttons = styled.div`
     display: flex;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import intro from '../svg/Intro.svg'
+import intro1 from '../svg/Intro_01.svg'
 import Items from '../components/Items'
 import items from '../mock/items'
 
@@ -14,7 +15,7 @@ const IntroImg = styled.img`
 
 export default () => (
     <Intro>
-        <IntroImg src={intro} alt=""/>
+        <IntroImg src={intro1} alt=""/>
         <Items items={items} title="Business"/>
     </Intro>
 )
