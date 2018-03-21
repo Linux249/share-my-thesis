@@ -1,39 +1,20 @@
-import React from 'react';
+import React, {Fragment} from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import {red, biscuit, blue, white, darkBlue, backGroundColor} from '../style/colors'
 import ViewIcon from '../svg/eye'
 import LikeIcon from '../svg/thumbs-up'
-import Item from './Item'
+
 const colors = [red, biscuit, blue]
 
-const Items = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-`
 
-const Header = styled.div`
-    display: flex;
-    align-items: center;
-    
-    text-indent: 1rem;
-    
-    color: ${red};
-    height: 10rem;
-    
-    font-family: Gilroy-bold, sans-serif;
-    font-size: 4rem;
-`
-
-
-const ItemContainer = styled.div`
-  
-   background-color: ${backGroundColor};
+const Item = styled(Link)`
+   background-color: ${white};
    // height: 800px;
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-   padding: 3rem;
+   width: 16rem;
+   //height: min-content;
+   margin: 1rem;
+   //text-align: left;
 `
 
 const TextBox = styled.div`
@@ -86,11 +67,21 @@ const Number = styled(Name)`
     padding: 0 1rem;
 `
 
-export default ({items, title}) => (
-    <Items>
-        <Header>{title}</Header>
-        <ItemContainer>
-            {items.map((item,i) => (<Item item={item} i={i} />))}
-        </ItemContainer>
-    </Items>
+export default ({item, i}) => (
+    <Fragment>
+        <Item to={`/thesis/${i}`}>
+            <Title>{item.title}</Title>
+            <TextBox>
+                <Name>{item.name}</Name>
+                <Text>{item.subject}</Text>
+                <Text>{item.uni}</Text>
+            </TextBox>
+            <Row>
+                <LikeIcon/>
+                <Number>{item.likes}</Number>
+                <ViewIcon/>
+                <Number>{item.views}</Number>
+            </Row>
+        </Item>
+    </Fragment>
 )
