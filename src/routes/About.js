@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components'
 import {biscuit, darkBlue, red} from '../style/colors'
 import about1 from '../svg/about_01.svg'
 import about2 from '../svg/about_02.svg'
 import about3 from '../svg/about_03.svg'
+import playButton from '../svg/play_button_video.svg'
+import Footer from '../components/Footer'
+import intro3 from '../svg/Intro_03.svg'
+
 
 const Area = styled.div`
 
@@ -37,6 +41,8 @@ const Header = styled.div`
 
 const Column = styled.div`
     width: 25%;
+    
+    padding-bottom: 3rem;
 `
 
 const Img = styled.img`
@@ -56,7 +62,15 @@ const Button = styled.div`
     
     cursor: pointer;
 `
-const Text = styled.div`
+const VideoContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;    
+`
+const Video = styled.img`
 
 `
 
@@ -66,29 +80,89 @@ const Number = styled.div`
     font-size: 3rem;
     
 `
+const Iframe = styled.iframe`
+    border: none;
+    width: 100%;
+    height: 100%;    
+    
+`
 
-export default () => (
-    <Area>
+const Intro = styled.img`
+    width: 100%;
+`
 
-        <iframe src="https://player.vimeo.com/video/260996942" width="900" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        <Header>What is this site about?</Header>
-        <Area2>
-            <Column>
-                <Number>1.</Number>
-                <Img src={about1}/>
-                <Button>Upload</Button>
-            </Column>
-            <Column>
-                <Number>2.</Number>
-                <Img src={about2}/>
-                <Button>Share</Button>
-            </Column>
-            <Column>
-                <Number>3.</Number>
-                <Img src={about3}/>
-                <Button>Explore</Button>
-            </Column>
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+`;
 
-        </Area2>
-    </Area>
-)
+const WhiteArea = styled.div`
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    //top: 0;
+    width: 80%;
+    height: 80%;
+    
+    background-color: white;
+`
+
+export default class extends Component {
+
+    state = {
+        showVideo: false
+    }
+
+
+    render() {
+
+        const { showVideo } = this.state
+
+        return (
+            <Area>
+
+                <Container>
+                    <Intro src={intro3}/>
+                    <WhiteArea>
+                        <VideoContainer onClick={() => this.setState({showVideo: true})}>
+                            {!showVideo ?
+                                <Video src={playButton}/>
+                                :
+                                <Iframe src="https://player.vimeo.com/video/260996942" width="900" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></Iframe>
+                            }
+                        </VideoContainer>
+                    </WhiteArea>
+
+                </Container>
+
+
+
+                <Header>What is this site about?</Header>
+                <Area2>
+                    <Column>
+                        <Number>1.</Number>
+                        <Img src={about1}/>
+                        <Button>Upload</Button>
+                    </Column>
+                    <Column>
+                        <Number>2.</Number>
+                        <Img src={about2}/>
+                        <Button>Share</Button>
+                    </Column>
+                    <Column>
+                        <Number>3.</Number>
+                        <Img src={about3}/>
+                        <Button>Explore</Button>
+                    </Column>
+
+                </Area2>
+                <Footer />
+            </Area>
+        )
+    }
+}

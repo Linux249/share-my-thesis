@@ -56,7 +56,7 @@ const BlueText = styled.div`
 class Explore extends Component {
 
     state = {
-        show: true
+        show: false
     };
 
     showModal = () => {
