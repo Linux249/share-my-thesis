@@ -1,6 +1,5 @@
-import React, {Component, Fragment} from 'react'
+import React, {Component} from 'react'
 import styled from 'styled-components'
-import Slider from 'react-slick'
 import intro1 from '../svg/Intro_01.svg'
 import intro2 from '../svg/Intro_02.svg'
 import intro3 from '../svg/Intro_03.svg'
@@ -88,13 +87,6 @@ export default class extends Component {
     }
 
     render() {
-        const settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1
-        };
 
         const { intro } = this.state
         return (

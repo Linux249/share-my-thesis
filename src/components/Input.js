@@ -44,12 +44,7 @@ const SearchButton = styled.div`
 
 class Input extends Component {
 
-    state = {
-        value: ""
-    };
-
     render() {
-        const {show} = this.state;
         const {placeholder, color} = this.props;
 
         return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components'
-import {red} from '../style/colors'
 import logo from '../svg/Logo.svg'
 
 const Logo = styled.div`
@@ -18,11 +17,6 @@ const Img = styled.img`
 
 export default () => (
     <Logo>
-
-
         <Img src={logo} alt=""/>
-        {/*<div>Share</div>
-        <LogoText>My</LogoText>
-        <div>Thesis</div>*/}
     </Logo>
 )

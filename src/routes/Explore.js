@@ -5,6 +5,7 @@ import Filter from '../components/Filter'
 import Subjects from '../components/Subjects'
 import TitleBox from '../style/TitleBox'
 import Input from '../components/Input'
+import Footer from '../components/Footer'
 
 const SearchArea = styled.div`
     display: flex;
@@ -94,6 +95,7 @@ class Explore extends Component {
                     }
                 </SearchArea>
                 <Subjects/>
+                <Footer />
             </div>
         )
     }

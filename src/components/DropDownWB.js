@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components'
-import {blue, darkBlue, pale, red, white} from '../style/colors'
+import {blue, darkBlue, pale, white} from '../style/colors'
 import ArrowDown from '../svg/ArrowDownBlue'
 
 const DropDownArea = styled.div`

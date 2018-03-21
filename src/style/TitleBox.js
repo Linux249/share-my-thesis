@@ -1,4 +1,3 @@
-import React, {Component} from 'react'
 import styled from 'styled-components'
 import {darkBlue, white} from './colors'
 

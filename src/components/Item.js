@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import {red, biscuit, blue, white, darkBlue, backGroundColor} from '../style/colors'
+import {red, biscuit, blue, white, darkBlue} from '../style/colors'
 import ViewIcon from '../svg/eye'
 import LikeIcon from '../svg/thumbs-up'
 import items from '../mock/items'
