@@ -51,7 +51,7 @@ export default () => (
         </NavLink>
         <NavLinks>
             <NavLink to="/explore" >Explore</NavLink>
-            <NavLink to="/share" >Share</NavLink>
+            <NavLink to="/share/1" >Share</NavLink>
             <NavLink to="/about" >About</NavLink>
         </NavLinks>
         <Buttons>
