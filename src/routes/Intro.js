@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import styled from 'styled-components'
-import intro from '../svg/Intro.svg'
+import Slider from 'react-slick'
 import intro1 from '../svg/Intro_01.svg'
 import intro2 from '../svg/Intro_02.svg'
 import intro3 from '../svg/Intro_03.svg'
@@ -54,6 +54,16 @@ const Dot = styled.div`
 const Row = styled.div`
   display: flex;
 `
+const Transision = styled.div`
+  width: ${({show}) => show ? '100%' : 0};
+  height: 100%;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: ${({show}) => show ? 1 : 0};
+  visibility: ${({show}) => show ? 'visible' : 'hidden'}; 
+`
 
 export default class extends Component {
     state = {
@@ -78,13 +88,20 @@ export default class extends Component {
     }
 
     render() {
+        const settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        };
+
         const { intro } = this.state
         return (
             <Intro>
                 <SlidesContainer>
 
-                    {intro === 0 &&
-                        <Fragment>
+                        <Transision show={intro === 0}>
                             <Overlay>
                                 <Text>Where is your<br/>dissertation<br/>getting dusty?<br/>employee...</Text>
                                 <Row>
@@ -94,10 +111,9 @@ export default class extends Component {
                                 </Row>
                             </Overlay>
                             <IntroImg src={intro1} alt=""/>
-                        </Fragment>
-                    }
-                    {intro === 1 &&
-                        <Fragment>
+                        </Transision>
+
+                        <Transision show={intro === 1}>
                             <Overlay>
                                 <Text>It could be on <br/>the desk of <br/>your future <br/>employee...</Text>
                                 <Row>
@@ -107,11 +123,10 @@ export default class extends Component {
                                 </Row>
                             </Overlay>
                             <IntroImg src={intro2} alt=""/>
-                        </Fragment>
-                    }
+                        </Transision>
 
-                    {intro === 2 &&
-                        <Fragment>
+
+                        <Transision show={intro === 2}>
                             <Overlay>
                                 <Text>It could inspire<br/>someone on the<br/>other side of<br/>the world...</Text>
                                 <Row>
@@ -121,8 +136,8 @@ export default class extends Component {
                                 </Row>
                             </Overlay>
                             <IntroImg src={intro3} alt=""/>
-                        </Fragment>
-                    }
+                        </Transision>
+
                 </SlidesContainer>
                 <Items items={items} title="Business"/>
             </Intro>
