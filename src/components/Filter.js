@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {darkBlue, pale, red, white} from '../style/colors'
-import DropDown from './DropDown'
 import Input from './Input'
-import {darkBlue, red, white} from '../style/colors'
 import DropDown from './DropDownBR'
 
 const Box = styled.div`
@@ -58,8 +56,13 @@ const Title = styled.div`
     font-size: 1.5rem;
     width: 100%;
     color: ${pale};    
-    padding-top: 1rem;
+    //padding-top: 1rem;
 `;
+
+const Smaler = styled.div`
+    width: 80%;
+`
+
 
 export default ({close}) => (
     <Box>
@@ -100,8 +103,10 @@ export default ({close}) => (
                     options={["Typ1", "Typ2", "Typ3", "Typ4", "Typ5", "Typ6", "Typ7 "]}
                 />
             </Column>
-            <Title>Search for any specific topic?</Title>
-            <Input placeholder="Field for Keywords" color="red"/>
+            <Smaler>
+                <Title>Search for any specific topic?</Title>
+                <Input placeholder="Field for Keywords" color="red"/>
+            </Smaler>
         </BoxContent>
 
     </Box>

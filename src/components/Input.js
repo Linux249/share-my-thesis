@@ -6,11 +6,11 @@ const InputArea = styled.div`
 
     display: flex;
     width: 100%;
-    height: 4rem;
+    height: 3rem;
     
     border: 0.1rem solid ${({color}) => color === "red" ? red : darkBlue};
     
-    margin: 2rem 0;
+    margin: 1rem 0;
 `;
 
 const InputStyled = styled.input`
