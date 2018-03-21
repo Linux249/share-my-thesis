@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom'
 import {red, biscuit, blue, white, darkBlue, backGroundColor} from '../style/colors'
 import ViewIcon from '../svg/eye'
 import LikeIcon from '../svg/thumbs-up'
+import items from '../mock/items'
+
 
 const colors = [red, biscuit, blue]
-
 
 const Item = styled(Link)`
    background-color: ${white};
    // height: 800px;
    width: 16rem;
-   //height: min-content;
+   height: 26.5rem;
    margin: 1rem;
    //text-align: left;
 `
@@ -67,7 +68,7 @@ const Number = styled(Name)`
     padding: 0 1rem;
 `
 
-export default ({item, i}) => (
+export default ({item = items[0], i}) => (
     <Fragment>
         <Item to={`/thesis/${i}`}>
             <Title>{item.title}</Title>

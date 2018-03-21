@@ -8,6 +8,13 @@ import { Route, Link } from "react-router-dom";
 import pdf from '../svg/pdf.svg'
 import arrow from '../svg/ArrowRightBlue.svg'
 import share from '../svg/share.svg'
+import Item from '../components/Item'
+import Thesis from './Thesis'
+
+const ThesisStyled = styled(Thesis)`
+  
+    background-color: white; !important;
+`
 
 const Area = styled.div`
     width: 100%;
@@ -128,8 +135,8 @@ const ThinText = styled.div`
     padding: 1rem 0;
 `
 
-const P = styled.div`
-    
+const Row2 = styled.div`
+    display: flex;
 `
 
 const Title = styled.div`
@@ -304,7 +311,10 @@ const Slide7 = () => (
         </Left>
         <Middle>
             <TitleBox>Preview</TitleBox>
-            {/*<Item />*/}
+            <Row2>
+                <Item />
+                <ThesisStyled id="0"/>
+            </Row2>
         </Middle>
         <Right>
             <Button to="/share/8" >Share<ImgSmall src={arrow}/></Button>

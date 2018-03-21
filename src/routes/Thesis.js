@@ -58,7 +58,7 @@ const Number = styled(Name)`
 `;
 
 export default ({match, id}) => {
-    const i = match.params.id % items.length || id; // modulus id
+    const i = match ? match.params.id % items.length : id; // modulus id
 
     return (
         <Thesis>
@@ -67,7 +67,7 @@ export default ({match, id}) => {
                 <Name>{items[i].name}</Name>
                 <Text>{items[i].subject}</Text>
                 <Text>{items[i].uni}</Text>
-                <Title>{items[ii].title}</Title>
+                <Title>{items[i].title}</Title>
                 <Row>
                     <LikeIcon/>
                     <Number>{items[i].likes}</Number>
