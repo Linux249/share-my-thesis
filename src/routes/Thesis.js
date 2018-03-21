@@ -57,22 +57,22 @@ const Number = styled(Name)`
     padding: 0 1rem;
 `;
 
-export default ({match}) => {
-    const id = match.params.id % items.length; // modulus id
+export default ({match, id}) => {
+    const i = match.params.id % items.length || id; // modulus id
 
     return (
         <Thesis>
             <Header>
 
-                <Name>{items[id].name}</Name>
-                <Text>{items[id].subject}</Text>
-                <Text>{items[id].uni}</Text>
-                <Title>{items[id].title}</Title>
+                <Name>{items[i].name}</Name>
+                <Text>{items[i].subject}</Text>
+                <Text>{items[i].uni}</Text>
+                <Title>{items[ii].title}</Title>
                 <Row>
                     <LikeIcon/>
-                    <Number>{items[id].likes}</Number>
+                    <Number>{items[i].likes}</Number>
                     <ViewIcon/>
-                    <Number>{items[id].views}</Number>
+                    <Number>{items[i].views}</Number>
                 </Row>
             </Header>
             <Text>
