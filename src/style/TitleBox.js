@@ -10,10 +10,11 @@ export const TitleBox = styled.div`
     font-family: "Gilroy-bold", sans-serif;
     background-color: ${darkBlue};
     color: ${white};
-    font-size: 3rem;
+    font-size: 2.5rem;
     
-    height: 9rem;
+    height: 7rem;
     width: 100%;
+    
 `;
 
 export default TitleBox

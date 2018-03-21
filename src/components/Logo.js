@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {red} from '../style/colors'
-//import logo from '../svg/Logo.svg'
+import logo from '../svg/Logo.svg'
 
 const Logo = styled.div`
     display: flex;
@@ -10,20 +10,19 @@ const Logo = styled.div`
 `;
 
 
-const LogoText = styled.div`
-    font-family: "Asphalts Brush", sans-serif;
-    color: ${red};
-    line-height: 1rem;
+const Img = styled.img`
+    width: 7rem;
+    height: 7rem;
 `;
 
 
 export default () => (
     <Logo>
 
-        {/*
-        <img src={logo} alt=""/>*/}
-        <div>Share</div>
+
+        <Img src={logo} alt=""/>
+        {/*<div>Share</div>
         <LogoText>My</LogoText>
-        <div>Thesis</div>
+        <div>Thesis</div>*/}
     </Logo>
 )

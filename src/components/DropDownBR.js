@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components'
 import {pale, red, white} from '../style/colors'
-import ArrowDown from '../svg/ArrowDown'
+import ArrowDown from '../svg/ArrowDownRed'
 
 const DropDownArea = styled.div`
     position: relative;
