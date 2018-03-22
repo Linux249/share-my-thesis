@@ -71,11 +71,20 @@ export default class extends Component {
     }
 
     componentDidMount() {
-        setInterval(this.updateIntro, 2000)
+        this.startInterval()
     }
 
     componentWillUnmount() {
+        this.endInterval()
+    }
+
+    startInterval = () => {
+        this.setState({timerId: setInterval(this.updateIntro, 5000)})
+    }
+
+    endInterval = () => {
         clearInterval(this.state.timerId)
+        this.setState({timerId: null})
     }
 
     updateIntro = () => {
@@ -86,20 +95,25 @@ export default class extends Component {
         })
     }
 
+    handleClick = (i) => {
+        this.endInterval()
+        this.setState({intro: i})
+        this.startInterval()
+    }
+
     render() {
 
         const { intro } = this.state
         return (
             <Intro>
                 <SlidesContainer>
-
                         <Transision show={intro === 0}>
                             <Overlay>
                                 <Text>Where is your<br/>dissertation<br/>getting dusty?<br/>employee...</Text>
                                 <Row>
-                                    <Dot color={'grey'} />
-                                    <Dot color={'white'} />
-                                    <Dot color={'white'} />
+                                    <Dot onClick={() => this.handleClick(0)} color={'grey'} />
+                                    <Dot onClick={() => this.handleClick(1)} color={'white'} />
+                                    <Dot onClick={() => this.handleClick(2)} color={'white'} />
                                 </Row>
                             </Overlay>
                             <IntroImg src={intro1} alt=""/>
@@ -107,11 +121,11 @@ export default class extends Component {
 
                         <Transision show={intro === 1}>
                             <Overlay>
-                                <Text>It could be on <br/>the desk of <br/>your future <br/>employee...</Text>
+                                <Text>It could inspire<br/>someone on the<br/>other side of<br/>the world...</Text>
                                 <Row>
-                                    <Dot color={'white'} />
-                                    <Dot color={'grey'} />
-                                    <Dot color={'white'} />
+                                    <Dot onClick={() => this.handleClick(0)} color={'white'} />
+                                    <Dot onClick={() => this.handleClick(1)} color={'grey'} />
+                                    <Dot onClick={() => this.handleClick(2)} color={'white'} />
                                 </Row>
                             </Overlay>
                             <IntroImg src={intro2} alt=""/>
@@ -120,11 +134,11 @@ export default class extends Component {
 
                         <Transision show={intro === 2}>
                             <Overlay>
-                                <Text>It could inspire<br/>someone on the<br/>other side of<br/>the world...</Text>
+                                <Text>It could be on <br/>the desk of <br/>your future <br/>employee...</Text>
                                 <Row>
-                                    <Dot color={'white'} />
-                                    <Dot color={'white'} />
-                                    <Dot color={'grey'} />
+                                    <Dot onClick={() => this.handleClick(0)} color={'white'} />
+                                    <Dot onClick={() => this.handleClick(1)} color={'white'} />
+                                    <Dot onClick={() => this.handleClick(2)} color={'grey'} />
                                 </Row>
                             </Overlay>
                             <IntroImg src={intro3} alt=""/>
