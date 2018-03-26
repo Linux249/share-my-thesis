@@ -4,6 +4,7 @@ import intro1 from '../svg/Intro_01.svg'
 import intro2 from '../svg/Intro_02.svg'
 import intro3 from '../svg/Intro_03.svg'
 import Items from '../components/Items'
+import Video from '../components/Video'
 import items from '../mock/items'
 
 const Intro = styled.div`
@@ -107,42 +108,48 @@ export default class extends Component {
         return (
             <Intro>
                 <SlidesContainer>
-                        <Transision show={intro === 0}>
-                            <Overlay>
-                                <Text>Where is your<br/>dissertation<br/>getting dusty?<br/>employee...</Text>
-                                <Row>
-                                    <Dot onClick={() => this.handleClick(0)} color={'grey'} />
-                                    <Dot onClick={() => this.handleClick(1)} color={'white'} />
-                                    <Dot onClick={() => this.handleClick(2)} color={'white'} />
-                                </Row>
-                            </Overlay>
-                            <IntroImg src={intro1} alt=""/>
-                        </Transision>
+                    <Transision show={intro === 0} onClick={this.endInterval}>
+                        <Video />
+                    </Transision>
+                    <Transision show={intro === 1}>
+                        <Overlay>
+                            <Text>Where is your<br/>dissertation<br/>getting dusty?<br/>employee...</Text>
+                            <Row>
+                                <Dot onClick={() => this.handleClick(0)} color={'white'} />
+                                <Dot onClick={() => this.handleClick(1)} color={'grey'} />
+                                <Dot onClick={() => this.handleClick(2)} color={'white'} />
+                                <Dot onClick={() => this.handleClick(3)} color={'white'} />
+                            </Row>
+                        </Overlay>
+                        <IntroImg src={intro1} alt=""/>
+                    </Transision>
 
-                        <Transision show={intro === 1}>
-                            <Overlay>
-                                <Text>It could inspire<br/>someone on the<br/>other side of<br/>the world...</Text>
-                                <Row>
-                                    <Dot onClick={() => this.handleClick(0)} color={'white'} />
-                                    <Dot onClick={() => this.handleClick(1)} color={'grey'} />
-                                    <Dot onClick={() => this.handleClick(2)} color={'white'} />
-                                </Row>
-                            </Overlay>
-                            <IntroImg src={intro2} alt=""/>
-                        </Transision>
+                    <Transision show={intro === 2}>
+                        <Overlay>
+                            <Text>It could inspire<br/>someone on the<br/>other side of<br/>the world...</Text>
+                            <Row>
+                                <Dot onClick={() => this.handleClick(0)} color={'white'} />
+                                <Dot onClick={() => this.handleClick(1)} color={'white'} />
+                                <Dot onClick={() => this.handleClick(2)} color={'grey'} />
+                                <Dot onClick={() => this.handleClick(3)} color={'white'} />
+                            </Row>
+                        </Overlay>
+                        <IntroImg src={intro2} alt=""/>
+                    </Transision>
 
 
-                        <Transision show={intro === 2}>
-                            <Overlay>
-                                <Text>It could be on <br/>the desk of <br/>your future <br/>employee...</Text>
-                                <Row>
-                                    <Dot onClick={() => this.handleClick(0)} color={'white'} />
-                                    <Dot onClick={() => this.handleClick(1)} color={'white'} />
-                                    <Dot onClick={() => this.handleClick(2)} color={'grey'} />
-                                </Row>
-                            </Overlay>
-                            <IntroImg src={intro3} alt=""/>
-                        </Transision>
+                    <Transision show={intro === 3}>
+                        <Overlay>
+                            <Text>It could be on <br/>the desk of <br/>your future <br/>employee...</Text>
+                            <Row>
+                                <Dot onClick={() => this.handleClick(0)} color={'white'} />
+                                <Dot onClick={() => this.handleClick(1)} color={'white'} />
+                                <Dot onClick={() => this.handleClick(2)} color={'white'} />
+                                <Dot onClick={() => this.handleClick(3)} color={'grey'} />
+                            </Row>
+                        </Overlay>
+                        <IntroImg src={intro3} alt=""/>
+                    </Transision>
 
                 </SlidesContainer>
                 <Items items={items} title="Business"/>
