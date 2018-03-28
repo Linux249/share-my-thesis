@@ -91,7 +91,7 @@ export default class extends Component {
     updateIntro = () => {
         this.setState(oldState => {
             let intro = oldState.intro + 1
-            if(intro > 2) intro = 0
+            if(intro > 3) intro = 0
             return { intro }
         })
     }
@@ -113,7 +113,7 @@ export default class extends Component {
                     </Transision>
                     <Transision show={intro === 1}>
                         <Overlay>
-                            <Text>Where is your<br/>dissertation<br/>getting dusty?<br/>employee...</Text>
+                            <Text>When was the <br/>last time you shared<br/>your dissertation<br/>with someone?</Text>
                             <Row>
                                 <Dot onClick={() => this.handleClick(0)} color={'white'} />
                                 <Dot onClick={() => this.handleClick(1)} color={'grey'} />
@@ -137,10 +137,9 @@ export default class extends Component {
                         <IntroImg src={intro2} alt=""/>
                     </Transision>
 
-
                     <Transision show={intro === 3}>
                         <Overlay>
-                            <Text>It could be on <br/>the desk of <br/>your future <br/>employee...</Text>
+                            <Text>It could be on <br/>the desk of <br/>your future <br/>employer...</Text>
                             <Row>
                                 <Dot onClick={() => this.handleClick(0)} color={'white'} />
                                 <Dot onClick={() => this.handleClick(1)} color={'white'} />
@@ -152,7 +151,7 @@ export default class extends Component {
                     </Transision>
 
                 </SlidesContainer>
-                <Items items={items} title="Business"/>
+                <Items items={items} title="Explore"/>
             </Intro>
         )
     }
