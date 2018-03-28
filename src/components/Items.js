@@ -12,6 +12,7 @@ const Items = styled.div`
 const Header = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
     
     text-indent: 1rem;
     

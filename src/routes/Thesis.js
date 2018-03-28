@@ -11,7 +11,7 @@ const Thesis = styled.div`
   align-items: center;
   
   & > div {
-      width: 70rem;
+      width: 90%;
   }
   
 `;
@@ -63,7 +63,6 @@ export default ({match, id}) => {
     return (
         <Thesis>
             <Header>
-
                 <Name>{items[i].name}</Name>
                 <Text>{items[i].subject}</Text>
                 <Text>{items[i].uni}</Text>

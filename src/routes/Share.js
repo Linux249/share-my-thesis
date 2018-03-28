@@ -6,7 +6,8 @@ import DropDown from '../components/DropDownWB'
 import TextArea from '../components/TextArea'
 import { Route, Link } from "react-router-dom";
 import pdf from '../svg/pdf.svg'
-import arrow from '../svg/ArrowRightBlue.svg'
+import arrowR from '../svg/ArrowRightBlue.svg'
+import arrowL from '../svg/ArrowLeftBlue.svg'
 import share from '../svg/share.svg'
 import Item from '../components/Item'
 import Thesis from './Thesis'
@@ -80,7 +81,13 @@ const Button2 = styled("div")`
 `
 
 const Left = styled.div`
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
     flex: 1;
+    
+    padding-bottom: 1rem;
 `
 
 const Middle = styled.div`
@@ -92,11 +99,23 @@ const Middle = styled.div`
     flex: 2;
 `
 
+const MiddleBig = styled.div`
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+    flex: 5;
+`
+
 const Right = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    
     flex: 1;
+    
+    padding-bottom: 1rem
 `
 
 const Row = styled.div`
@@ -176,7 +195,7 @@ const Slide1 = () => (
             <DropDown title="When did you hand in your dissertation?" options={["2018"]}/>
         </Middle>
         <Right>
-            <Button to="/share/2" > Next<ImgSmall src={arrow}/></Button>
+            <Button to="/share/2" > Next<ImgSmall src={arrowR}/></Button>
         </Right>
     </Fragment>
 )
@@ -184,7 +203,7 @@ const Slide1 = () => (
 const Slide2 = () => (
     <Fragment>
         <Left>
-
+            <Button to="/share/1" ><ImgSmall src={arrowL}/>Back</Button>
         </Left>
         <Middle>
             <TitleBox>TELL US ABOUT YOUR THESIS</TitleBox>
@@ -193,7 +212,7 @@ const Slide2 = () => (
             <DropDown title="What is the land of your university?" options={["2018"]}/>
         </Middle>
         <Right>
-            <Button to="/share/3" >Next<ImgSmall src={arrow}/></Button>
+            <Button to="/share/3" >Next<ImgSmall src={arrowR}/></Button>
         </Right>
     </Fragment>
 )
@@ -201,14 +220,14 @@ const Slide2 = () => (
 const Slide3 = () => (
     <Fragment>
         <Left>
-
+            <Button to="/share/2" ><ImgSmall src={arrowL}/>Back</Button>
         </Left>
         <Middle>
             <TitleBox>ONE SENTENCE</TitleBox>
             <TextArea title="How would you summarise your thesis in one sentence?"/>
         </Middle>
         <Right>
-            <Button to="/share/4" >Next<ImgSmall src={arrow}/></Button>
+            <Button to="/share/4" >Next<ImgSmall src={arrowR}/></Button>
         </Right>
     </Fragment>
 )
@@ -217,6 +236,7 @@ const Slide3 = () => (
 const Slide4 = () => (
     <Fragment>
         <Left>
+            <Button to="/share/3" ><ImgSmall src={arrowL}/>Back</Button>
 
         </Left>
         <Middle>
@@ -227,7 +247,7 @@ const Slide4 = () => (
             <TextArea title="Which tool/abalysis/approach did you use?"/>
         </Middle>
         <Right>
-            <Button to="/share/5" >Next<ImgSmall src={arrow}/></Button>
+            <Button to="/share/5" >Next<ImgSmall src={arrowR}/></Button>
         </Right>
     </Fragment>
 )
@@ -236,7 +256,7 @@ const Slide4 = () => (
 const Slide5 = () => (
     <Fragment>
         <Left>
-
+            <Button to="/share/4" ><ImgSmall src={arrowL}/>Back</Button>
         </Left>
         <Middle>
             <Title>You have an abstract for your thesis?</Title>
@@ -263,7 +283,7 @@ const Slide5 = () => (
             </Row>
         </Middle>
         <Right>
-            <Button to="/share/6" > Next<ImgSmall src={arrow}/></Button>
+            <Button to="/share/6" > Next<ImgSmall src={arrowR}/></Button>
         </Right>
     </Fragment>
 )
@@ -272,7 +292,7 @@ const Slide5 = () => (
 const Slide6 = () => (
     <Fragment>
         <Left>
-
+            <Button to="/share/5" ><ImgSmall src={arrowL}/>Back</Button>
         </Left>
         <Middle>
             <TitleBox>ALLMOST DONE</TitleBox>
@@ -298,7 +318,7 @@ const Slide6 = () => (
             </Row>
         </Middle>
         <Right>
-            <Button to="/share/7" >Next<ImgSmall src={arrow}/></Button>
+            <Button to="/share/7" >Next<ImgSmall src={arrowR}/></Button>
         </Right>
     </Fragment>
 )
@@ -307,17 +327,17 @@ const Slide6 = () => (
 const Slide7 = () => (
     <Fragment>
         <Left>
-
+            <Button to="/share/6" ><ImgSmall src={arrowL}/>Back</Button>
         </Left>
-        <Middle>
+        <MiddleBig>
             <TitleBox>Preview</TitleBox>
             <Row2>
                 <Item />
                 <ThesisStyled id="0"/>
             </Row2>
-        </Middle>
+        </MiddleBig>
         <Right>
-            <Button to="/share/8" >Share<ImgSmall src={arrow}/></Button>
+            <Button to="/share/8" >Share<ImgSmall src={arrowR}/></Button>
         </Right>
     </Fragment>
 )
