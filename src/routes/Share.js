@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react';
+import { Route, Link } from "react-router-dom";
+import DropDown from '../components/DropDownWB'
+import TextArea from '../components/TextArea'
+import ShareSlide from '../components/ShareSlide'
+import Item from '../components/Item'
+import Thesis from './Thesis'
 import TitleBox from '../style/TitleBox'
 import styled from 'styled-components'
 import {darkBlue, pale, red, white} from '../style/colors'
-import DropDown from '../components/DropDownWB'
-import TextArea from '../components/TextArea'
-import { Route, Link } from "react-router-dom";
 import pdf from '../svg/pdf.svg'
 import arrowR from '../svg/ArrowRightBlue.svg'
 import arrowL from '../svg/ArrowLeftBlue.svg'
-import share from '../svg/share.svg'
-import Item from '../components/Item'
-import Thesis from './Thesis'
 
 const ThesisStyled = styled(Thesis)`
   
@@ -36,10 +36,6 @@ const ImgSmall = styled.img`
     height: 3rem;
 `
 
-const ImgBig = styled.img`
-    width: 100%;
-    height: 100%;
-`
 
 const SildeArea = styled.div`
     display: flex;
@@ -47,7 +43,7 @@ const SildeArea = styled.div`
     width: 100%;
     min-height: 40rem;
     
-    padding-top: 10rem;
+    
          
     background-color: ${red};    
 
@@ -97,14 +93,13 @@ const Middle = styled.div`
     align-items: center;
     
     flex: 2;
+    
+    
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 `
 
-const MiddleBig = styled.div`
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    
+const MiddleBig = styled(Middle)`
     flex: 5;
 `
 
@@ -344,7 +339,7 @@ const Slide7 = () => (
 
 const Slide8 = () => (
     <Fragment>
-        <ImgBig src={share}/>
+        <ShareSlide />
     </Fragment>
 )
 

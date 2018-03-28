@@ -6,6 +6,8 @@ import intro3 from '../svg/Intro_03.svg'
 import Items from '../components/Items'
 import Video from '../components/Video'
 import items from '../mock/items'
+import ShareSlide from '../components/ShareSlide'
+
 
 const Intro = styled.div`
     
@@ -152,6 +154,7 @@ export default class extends Component {
 
                 </SlidesContainer>
                 <Items items={items} title="Explore"/>
+                <ShareSlide />
             </Intro>
         )
     }
